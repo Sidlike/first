@@ -1,0 +1,82 @@
+$first-width: 500px;
+
+$col-width: 33.3%;
+
+$blck-1-c: #f3f3ef;
+$blck-2-c: #ccc5c5;
+$blck-3-c: #e4e4e8;
+
+@mixin flex($margin) {
+  display: flex;
+  margin: 0 $margin;
+}
+
+@mixin col($padding, $top) {
+  margin-top: $top;
+  padding: 0 $padding;
+  width: $col-width;
+}
+
+$s: 300px;
+$m: 540px;
+$l: 960px;
+$xl: 1280px;
+
+body {
+	background: $color;
+
+  @include breakpoint($s) {
+    background: yellow;
+  }
+
+  @include breakpoint($m) {
+    background: blue;
+  }
+
+  @include breakpoint($l) {
+    background: red;
+  }
+
+  @include breakpoint($xl) {
+    background: green;
+  }
+}
+
+#content {
+  @include flex(10px);
+  width: $first-width;
+
+  .block {
+    @include col(10px, 50px);
+  }
+
+  .block1 {
+    border: 1px solid #ccc;
+    color: #fff;
+    background: $blck-1-c;
+  }
+
+  .block2 {
+    @extend .block1;
+    background: $blck-2-c;
+  }
+
+  .block3 {
+    @extend .block1;
+    background: $blck-3-c;
+  }
+}
+
+.container {
+  width: 100%;
+
+  article {
+    float: left;
+    width: 600px /960px * 100%;
+  }
+
+  aside {
+    float: right;
+    width: 300px/960px * 100%;
+  }
+}

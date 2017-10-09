@@ -1,0 +1,27 @@
+h1 Header
+
+/= simple_form_for(@post) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :title
+    / = f.input :text
+
+  .form-actions
+    = f.button :submit
+
+
+
+
+=simple_form_for(@post) do |f|
+  /= f.input :username, label: 'test youre might', input_html: {class: 'test_class', placeholder: 'html', maxlength: 10, size: 20}, wrapper_html: {class: 'div_class'}, required: true, disabled: true
+  / = f.input :title
+  = f.input :title
+  /= f.input :email, placeholder: 'test@test.mail.ru'
+  = f.input :text
+  /= f.input :username, as: :select
+  /= f.input :date_of_birth, as: :date, start_year: Date.today.year - 3, end_year: Date.today.year + 3, discard_day: true, order: [:month, :year]
+  /= f.input :age, collection: 18..60, prompt: "Select your age", selected: 21
+  /= f.input :residence_country, priority: [ "Russia" ]
+  .form-actions
+    = f.button :submit

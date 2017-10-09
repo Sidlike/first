@@ -1,0 +1,11 @@
+@import 'breakpoint-sass/stylesheets/breakpoint';
+@import 'reset-css/_reset';
+
+
+$color: #878de6;
+
+body {
+	background: #000;
+}
+
+@import 'pages';
