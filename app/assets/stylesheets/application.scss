@@ -8,4 +8,21 @@ body {
 	background: #000;
 }
 
+.previewAreaBox {
+    background: #fff;
+    border: solid 1px #2d2d2d;
+    font-size: 18px;
+
+    height: 270px;
+    position: relative;
+    width: 141px;
+}
+.previewAreaBoxRotet {
+    position: absolute;
+    transform: rotate(90deg) translate(0%, -50%);
+    top: 50%;
+    right: 0;
+    width: 270px;
+    text-align: center;
+}
 @import 'pages';

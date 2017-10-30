@@ -1,0 +1,27 @@
+= form_with model: @article, local:true do |form|
+  - if @article.errors.any?
+    #error_explanation
+      h2
+        = pluralize(@article.errors.count, "error")
+        |&nbsp;prohibited this article from being saved:
+      ul
+        - @article.errors.full_messages.each do |msg| 
+          li = msg
+        end 
+
+  p
+    = form.label :title
+    = form.text_field :title
+ 
+  p
+    = form.label :text
+    = form.text_area :text
+    / = debug @article.image
+    - if @article.image.presence 
+      / = debug @article.image.url
+      = image_tag @article.image.preview.url
+    = form.file_field :image
+ 
+  p
+   = form.submit
+  p

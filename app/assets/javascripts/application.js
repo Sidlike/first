@@ -12,4 +12,5 @@
 //
 //= require rails-ujs
 //= require jquery
+//= require sticky-kit/dist/sticky-kit.min
 //= require_tree .

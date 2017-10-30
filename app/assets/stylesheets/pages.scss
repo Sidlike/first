@@ -26,19 +26,19 @@ body {
 	background: $color;
 
   @include breakpoint($s) {
-    background: yellow;
+    // background: yellow;
   }
 
   @include breakpoint($m) {
-    background: blue;
+    // background: blue;
   }
 
   @include breakpoint($l) {
-    background: red;
+    // background: red;
   }
 
   @include breakpoint($xl) {
-    background: green;
+    // background: green;
   }
 }
 
@@ -79,4 +79,67 @@ body {
     float: right;
     width: 300px/960px * 100%;
   }
+}
+.page_common {
+  padding-left: 1rem;
+    padding-right: 1rem;
+    width: 75%;
+    margin-left: 12.5%;
+}
+.page {
+    padding-top: 10rem;
+}
+.product {
+  align-content: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  // align-items: stretch;
+  padding: 0 1rem;
+}
+.product .product_data_wrapper {
+    width: 33.3333333333%;
+    margin-left: 8.3333333333%;
+    margin-right: 8.3333333333%;;
+}
+
+.product .product_images {
+    border: 1px solid blue;
+    width: 50%;
+    display: block;
+}
+
+.product_data .title_and_color .title .another_variants {
+    display: none;
+}
+
+.page .product_data .acc_item .title .varr_icon {
+    display: block;
+    width: 10px;
+    height: 24px;
+    margin-left: 0.5rem;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    margin-left: auto;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.product_data .acc_item .title .varr_icon {
+  display: none;
+}
+.product_data .sizes_list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
