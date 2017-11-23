@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :reports
   resources :slides
   resources :prices
   scope "(:city)", city: /nn/ do
