@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :slides
   resources :prices
   scope "(:city)", city: /nn/ do
     get '', to: 'pages#index' 
