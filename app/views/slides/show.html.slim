@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @slide.name
+p
+  strong Link:
+  = @slide.link
+p
+  strong Image:
+  = @slide.image
+
+=> link_to 'Edit', edit_slide_path(@slide)
+'|
+=< link_to 'Back', slides_path

@@ -1,0 +1,25 @@
+h1 Listing slides
+
+table
+  thead
+    tr
+      th Name
+      th Link
+      th Image
+      th
+      th
+      th
+
+  tbody
+    - @slides.each do |slide|
+      tr
+        td = slide.name
+        td = slide.link
+        td = slide.image
+        td = link_to 'Show', slide
+        td = link_to 'Edit', edit_slide_path(slide)
+        td = link_to 'Destroy', slide, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Slide', new_slide_path
